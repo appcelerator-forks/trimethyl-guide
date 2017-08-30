@@ -1,0 +1,27 @@
+{
+  "libs": [
+    "trimethyl",
+    "app",
+    "auth",
+    "auth/facebook",
+    "db",
+    "device",
+    "fb",
+    "filesystem",
+    "flow",
+    "ga",
+    "geo",
+    "http",
+    "logger",
+    "notifications",
+    "notifications/cloud",
+    "prop",
+    "router",
+    "uiutil",
+    "weballoy",
+    "alloy/sync/rest",
+    "ext/q"
+  ],
+  "version": "9.2.1",
+  "install_date": 1504043478117
+}
