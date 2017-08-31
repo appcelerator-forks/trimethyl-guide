@@ -11,8 +11,8 @@ T('trimethyl');
 // Load trimethyl modules //
 ////////////////////////////
 
-var Auth = null;
-var HTTP = null;
+var Auth = T('auth');
+var HTTP = T('http');
 var App = T('app');
 var Dialog = T('dialog');
 var Event = T('event');
@@ -47,16 +47,10 @@ Alloy.Globals.navBarHeight = (OS_IOS || Alloy.isTablet) ? 64 : 56;
 Alloy.Globals.statusBarHeight = 20;
 Alloy.Globals.contentMargin = Alloy.isTablet ? 44 : 16;
 Alloy.Globals.contentWidth = Alloy.Globals.SCREEN_WIDTH - (Alloy.isTablet ? Alloy.Globals.contentMargin * 2 : 0);
-Alloy.Globals.formWidth = Alloy.Globals.SCREEN_WIDTH - (Alloy.isTablet ? 24 * 2 : 0);
-Alloy.Globals.formWrapWidth = (Alloy.Globals.formWidth / 2) - (12 * 2) - 0.5; // Subtract half point to avoid wrapping
-Alloy.Globals.formToolWidth = (Alloy.Globals.formWidth / 2) - (19 * 2) - 0.5; // Subtract half point to avoid wrapping
-Alloy.Globals.pocHeaderHeight = Alloy.isTablet ? (Alloy.Globals.SCREEN_WIDTH * 0.66) : Alloy.Globals.SCREEN_WIDTH;
 
 //////////
 // Core //
 //////////
-
-var UI = require('core-ui');
 
 require('routes');
 
@@ -66,4 +60,6 @@ require('routes');
 
 Notifications.onReceived = function(e) {
 	// Handle notifications
+	exports.notification = e;
+	Core.consumeQueuedNotification();
 };

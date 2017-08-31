@@ -20,8 +20,12 @@
     "uiutil",
     "weballoy",
     "alloy/sync/rest",
-    "ext/q"
+    "ext/q",
+    "xmlparser",
+    "event",
+    "util",
+    "uifactory"
   ],
-  "version": "9.2.1",
-  "install_date": 1504043478117
+  "version": "9.2.0",
+  "install_date": 1504195129237
 }

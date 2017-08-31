@@ -1,8 +1,88 @@
 {
-	"global": {},
-	"env:development": {},
-	"env:test": {},
-	"env:production": {},
+	"global": {
+		"ui": {
+			"color": {
+				"white": "#fff",
+				"red": "red",
+				"balck": "#000"
+			},
+			"font": {
+				"main": "monospace"
+			}
+		}
+	},
+	"env:development": {
+		"T":{
+			"notifications":{
+				"driver": "http"
+			},
+			"http":{
+				"base": "http://imdb.api.progress44.com",
+				"log": false
+			},
+			"ga": {
+				"ua": "UA-0000-00",
+				"log": false
+			},
+			"fb":{
+				"permissions":["email","user_likes"]
+			},
+			"auth":{
+				"facebook":{
+					"loginUrl": "/login/fb"
+				}
+			}
+		}
+
+	},
+	"env:test": {
+		"T":{
+			"notifications":{
+				"driver": "http"
+			},
+			"http":{
+				"base": "http://imdb.api.progress44.com",
+				"log": false
+			},
+			"ga": {
+				"ua": "UA-0000-00",
+				"log": false
+			},
+			"fb":{
+				"permissions":["email","user_likes"]
+			},
+			"auth":{
+				"facebook":{
+					"loginUrl": "/login/fb"
+				}
+			}
+		}
+
+	},
+	"env:production": {
+		"T":{
+			"notifications":{
+				"driver": "http"
+			},
+			"http":{
+				"base": "http://imdb.api.progress44.com",
+				"log": false
+			},
+			"ga": {
+				"ua": "UA-0000-00",
+				"log": false
+			},
+			"fb":{
+				"permissions":["email","user_likes"]
+			},
+			"auth":{
+				"facebook":{
+					"loginUrl": "/login/fb"
+				}
+			}
+		}
+
+	},
 	"os:android": {},
 	"os:blackberry": {},
 	"os:ios": {},

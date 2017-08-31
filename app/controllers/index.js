@@ -1,5 +1,8 @@
-function doClick(e) {
-	alert($.label.text);
-}
+var args = arguments[0] || {};
 
-$.index.open();
+
+//////////
+// Open //
+//////////
+
+Flow.setNavigationController($.index, true);
