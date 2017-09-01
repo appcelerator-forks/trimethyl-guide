@@ -1,5 +1,5 @@
 Router.on('/login', function() {
-	Flow.open("index", {});	
+	Flow.openDirect("login", {});	
 });
 
 // Router.on('/logout', function() {
