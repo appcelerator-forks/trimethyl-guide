@@ -1,0 +1,5 @@
+<Alloy>
+	<Window title="Movies">
+		<Label text="Movies List" />
+	</Window>
+</Alloy>

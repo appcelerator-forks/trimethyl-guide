@@ -24,18 +24,12 @@ var Router = T('router');
 var Util = T('util');
 var WebAlloy = T('weballoy');
 var GA = T('ga');
-
-// Perform preinit of database and directories
-var Core = require('core');
-
-WebAlloy.addHelper('RESOURCE_DIR', Util.getResourcesDirectory());
-WebAlloy.addHelper('ASSETS_DIR', Util.getResourcesDirectory() + 'web/assets/');
+var UIFactory = T('uifactory');
 
 ////////////////////////
 // Load other modules //
 ////////////////////////
 var Moment = require('alloy/moment');
-
 
 
 ///////////////////
@@ -48,11 +42,19 @@ Alloy.Globals.statusBarHeight = 20;
 Alloy.Globals.contentMargin = Alloy.isTablet ? 44 : 16;
 Alloy.Globals.contentWidth = Alloy.Globals.SCREEN_WIDTH - (Alloy.isTablet ? Alloy.Globals.contentMargin * 2 : 0);
 
+WebAlloy.addHelper('RESOURCE_DIR', Util.getResourcesDirectory());
+WebAlloy.addHelper('ASSETS_DIR', Util.getResourcesDirectory() + 'web/assets/');
+
 //////////
 // Core //
 //////////
 
+// Perform preinit of database and directories
+var Core = require('core');
+var UI   = require('core-ui');
+
 require('routes');
+require('events');
 
 ///////////////////
 // Notifications //
@@ -60,6 +62,11 @@ require('routes');
 
 Notifications.onReceived = function(e) {
 	// Handle notifications
-	exports.notification = e;
-	Core.consumeQueuedNotification();
+	Core.notification = e;
+	if (Core.canConsumeQueuedNotification()) Core.consumeQueuedNotification();
 };
+
+if(!Ti.App.Properties.hasProperty("notifications.enabled") || JSON.parse(Ti.App.Properties.getString("notifications.enabled")).default){
+	Logger.info("Activating notifications");
+	Notifications.activate();
+}

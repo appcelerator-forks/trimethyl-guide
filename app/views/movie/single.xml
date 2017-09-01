@@ -1,0 +1,5 @@
+<Alloy>
+	<Window title="Movie">
+		<Label text="Single Movie" />
+	</Window>
+</Alloy>
