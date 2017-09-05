@@ -1,6 +1,6 @@
 
 function authHandler(e) {
-	Ti.API.debug('Auth: ', e);
+	Logger.debug('Auth: ', e);
 	Flow.close();
 	Router.go("/movies");
 }

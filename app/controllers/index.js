@@ -5,13 +5,13 @@ var args = arguments[0] || {};
 // Open //
 //////////
 function auto() {
-	Router.go("/login");
-	/*Auth.autologin({
+	Auth.autoLogin({
 		timeout: 5000,
 		error: function() {
 			Logger.warn("Failed to login");
-		}
-	});*/
+			Router.go("/login");
+		},
+	});
 }
 
 
