@@ -1,4 +1,6 @@
 <?xml version="1.0"?><resources>
   <string name="cancel">Annulla</string>
   <string name="yes">Si</string>
+  <string name="login">Login</string>
+  <string name="login_with_facebook">Login con Facebook™</string>
 </resources>

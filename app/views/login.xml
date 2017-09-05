@@ -1,0 +1,8 @@
+<Alloy>
+	<Window>
+		<View class="container">
+			<Label class="title" text="L('login')" />
+			<Button title="L('login_with_facebook')" id="loginButton" />
+		</View>
+	</Window>
+</Alloy>

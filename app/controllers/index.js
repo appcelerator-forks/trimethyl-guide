@@ -5,7 +5,7 @@ var args = arguments[0] || {};
 // Open //
 //////////
 function auto() {
-	Router.go("/movies");
+	Router.go("/login");
 	/*Auth.autologin({
 		timeout: 5000,
 		error: function() {
