@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app 
   xmlns:ti="http://ti.appcelerator.org">
-  <id>com.p44.trimethyltest</id>
+  <id>com.caffeina.trimethyltest</id>
   <name>trimethyltest</name>
   <version>1.0</version>
   <publisher>not specified</publisher>
@@ -39,11 +39,77 @@
         <false/>
         <key>UIStatusBarStyle</key>
         <string>UIStatusBarStyleDefault</string>
+        <key>CFBundleURLTypes</key>
+        <array>
+          <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>fb1061219234012962</string>
+          </array>
+          </dict>
+        </array>
+        <key>FacebookAppID</key>
+        <string>1061219234012962</string>
+        <key>FacebookDisplayName</key>
+        <string>Trimethyl Test</string>
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+          <string>fbapi</string>
+          <string>fb-messenger-api</string>
+          <string>fbauth2</string>
+          <string>fbshareextension</string>
+        </array>
       </dict>
+      <key>NSAppTransportSecurity</key>
+      <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>facebook.com</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key> 
+                    <true/>        
+                    <key>NSExceptionRequiresForwardSecrecy</key> 
+                    <false/>
+                </dict>
+            <key>fbcdn.net</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key> 
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key>  
+                    <false/>
+                </dict>
+            <key>akamaihd.net</key>
+                <dict>
+                    <key>NSIncludesSubdomains</key> 
+                    <true/>
+                    <key>NSExceptionRequiresForwardSecrecy</key> 
+                    <false/>
+                </dict>
+        </dict>
+    </dict>
     </plist>
   </ios>
   <android 
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest android:installLocation="auto" android:versionCode="1" android:versionName="1.0.0">
+      <uses-sdk android:targetSdkVersion="23" android:minSdkVersion="14"/>
+      <supports-screens android:xlargeScreens="false" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+      
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+      <application android:hardwareAccelerated="true" android:theme="@style/Theme.AppCompat" android:largeHeap="true">
+        <activity android:name=".TrimethylTestActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize">
+          <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+          </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.Activity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="Trimethyl Test"/>
+        <activity android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="Trimethyl Test" android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+      </application>
+    </manifest>
   </android>
   <modules>
     <module platform="iphone">ti.safaridialog</module>
