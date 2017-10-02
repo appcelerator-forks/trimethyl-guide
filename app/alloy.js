@@ -18,13 +18,14 @@ var Dialog = T('dialog');
 var Event = T('event');
 var Flow = T('flow');
 var Logger = T('logger');
-var Notifications = T('notifications');
+/*var Notifications = T('notifications');*/
 var Q = T('ext/q');
 var Router = T('router');
 var Util = T('util');
 var WebAlloy = T('weballoy');
 var GA = T('ga');
 var UIFactory = T('uifactory');
+var FB = T('fb');
 
 ////////////////////////
 // Load other modules //
@@ -56,7 +57,7 @@ var UI   = require('core-ui');
 require('routes');
 require('events');
 
-///////////////////
+/*///////////////////
 // Notifications //
 ///////////////////
 
@@ -69,4 +70,4 @@ Notifications.onReceived = function(e) {
 if(!Ti.App.Properties.hasProperty("notifications.enabled") || JSON.parse(Ti.App.Properties.getString("notifications.enabled")).default){
 	Logger.info("Activating notifications");
 	Notifications.activate();
-}
+}*/
