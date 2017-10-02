@@ -17,7 +17,7 @@
 				"driver": "http"
 			},
 			"http":{
-				"base": "http://imdb.api.progress44.com",
+				"base": "https://tmdb.progress44.com/v1",
 				"log": false
 			},
 			"ga": {
@@ -41,7 +41,7 @@
 				"driver": "http"
 			},
 			"http":{
-				"base": "http://imdb.api.progress44.com",
+				"base": "https://tmdb.progress44.com/v1",
 				"log": false
 			},
 			"ga": {
@@ -65,7 +65,7 @@
 				"driver": "http"
 			},
 			"http":{
-				"base": "http://imdb.api.progress44.com",
+				"base": "https://tmdb.progress44.com/v1",
 				"log": false
 			},
 			"ga": {

@@ -2,6 +2,8 @@
 /Resources
 /platform
 /i18n
+/modules/iphone/appcelerator.https
+/moduels/android/appcelerator.https
 build.log
 build
 npm-debug.log

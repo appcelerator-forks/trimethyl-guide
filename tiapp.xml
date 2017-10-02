@@ -92,7 +92,7 @@
   <android 
     xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:installLocation="auto" android:versionCode="1" android:versionName="1.0.0">
-      <uses-sdk android:targetSdkVersion="23" android:minSdkVersion="14"/>
+      <uses-sdk android:targetSdkVersion="26" android:minSdkVersion="16"/>
       <supports-screens android:xlargeScreens="false" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
       
       <uses-permission android:name="android.permission.INTERNET"/>
@@ -117,8 +117,8 @@
     <module platform="android">ti.ga</module>
     <module platform="iphone">appcelerator.https</module>
     <module platform="android">appcelerator.https</module>
-    <module platform="iphone">appcelerator.encrypteddatabase</module>
-    <module platform="android">appcelerator.encrypteddatabase</module>
+    <!-- <module platform="iphone">appcelerator.encrypteddatabase</module>
+    <module platform="android">appcelerator.encrypteddatabase</module> -->
     <module platform="iphone">bencoding.securely</module>
     <module platform="android">bencoding.securely</module>
     <module platform="iphone">ti.touchid</module>
@@ -139,7 +139,7 @@
     <target device="iphone">true</target>
     <target device="mobileweb">true</target>
   </deployment-targets>
-  <sdk-version>6.0.4.CAFFEINA-1</sdk-version>
+  <sdk-version>6.2.2.GA</sdk-version>
   <plugins>
     <plugin version="1.0">ti.alloy</plugin>
   </plugins>
