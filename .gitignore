@@ -3,7 +3,7 @@
 /platform
 /i18n
 /modules/iphone/appcelerator.https
-/moduels/android/appcelerator.https
+/modules/android/appcelerator.https
 build.log
 build
 npm-debug.log
