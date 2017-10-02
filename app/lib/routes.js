@@ -8,7 +8,10 @@ Router.on('/login', function() {
 // });
 
 Router.on('/movies', function() {
-	Flow.openDirect("movie", {});
+	Core.getConfiguration()
+	.then(function(conf) {
+		Flow.openDirect("movie", {tmdb: conf});
+	});
 });
 
 Router.on(/\/movies\/([^\/]+)\/?/, function(id) {

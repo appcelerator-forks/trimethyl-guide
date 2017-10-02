@@ -22,3 +22,21 @@ exports.consumeQueuedNotification = function() {
 
 	Event.trigger("notifications.new", notif);
 };
+
+var configuration = null;
+
+exports.getConfiguration = function() {
+	return Q.promise(function(resolve, reject) {
+		if (configuration == null) {
+			configuration = Alloy.createModel("configuration");
+			configuration.fetch({
+				success: function() {
+					resolve(configuration);
+				},
+				error: reject
+			});
+		} else {
+			return resolve(configuration);
+		}
+	});
+};
