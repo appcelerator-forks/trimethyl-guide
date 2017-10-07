@@ -1,5 +1,5 @@
 <Alloy>
 	<NavigationWindow module="T/uifactory">
-		<Require src="movie/list" />
+		<Require src="movie/list" id="list"/>
 	</NavigationWindow>
 </Alloy>

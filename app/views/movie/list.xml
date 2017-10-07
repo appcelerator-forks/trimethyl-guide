@@ -1,5 +1,25 @@
 <Alloy>
 	<Window title="Movies">
 		<Label text="Movies List" />
+		<ListView id="moviesList" defaultItemTemplate="movie">
+			<Templates>
+				
+				<ItemTemplate name="movie">
+                	<View id="columns">
+	                    <ImageView bindId="poster" id="poster"/>
+	                    <View class="centerVertically">
+		                    <View class="details">
+			                    <Label class="lbl" bindId="title" id="title" />
+			                    <Label class="lbl" bindId="rating" id="rating" />
+			                    <Label class="lbl" bindId="adult" id="adult" />
+			                    <Label class="lbl" bindId="language" id="language" />
+			                    <Label class="lbl" bindId="popularity" id="popularity" />
+			                </View>
+			            </View>
+		            </View>
+                </ItemTemplate>
+
+            </Templates>
+		</ListView>
 	</Window>
 </Alloy>

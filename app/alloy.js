@@ -26,6 +26,7 @@ var WebAlloy = T('weballoy');
 var GA = T('ga');
 var UIFactory = T('uifactory');
 var FB = T('fb');
+var UIUtil = T('uiutil');
 
 ////////////////////////
 // Load other modules //
