@@ -5,7 +5,7 @@
 			<Templates>
 				
 				<ItemTemplate name="movie">
-                	<View id="columns">
+                	<View id="columns" onClick="listItemClicked">
 	                    <ImageView bindId="poster" id="poster"/>
 	                    <View class="centerVertically">
 		                    <View class="details">

@@ -10,7 +10,6 @@ function populate() {
 }
 
 function getTemplateObject(model) {
-	Logger.warn(model);
 	var ob = {
 		poster: {
 			image: Config.getImageBase(200, "poster") + model.get("poster_path")
@@ -59,4 +58,12 @@ $.setConfiguration = function(conf) {
 		Config = conf;
 	}
 }
+
+
+// Event listeners
+
+function listItemClicked(e) {
+	if (e.itemId) Router.go("/movie/" + e.itemId);
+};
+
 
