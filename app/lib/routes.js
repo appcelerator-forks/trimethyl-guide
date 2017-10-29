@@ -15,7 +15,11 @@ Router.on('/movies', function() {
 });
 
 Router.on(/\/movies\/([^\/]+)\/?/, function(id) {
-	Flow.open("movie/single", {
-		id: id
+	Core.getConfiguration()
+	.then(function(conf) {
+		Flow.open("movie/single", {
+			id: id,
+			tmdb: conf
+		});
 	});
 });
