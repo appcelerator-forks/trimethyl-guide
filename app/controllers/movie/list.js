@@ -49,21 +49,18 @@ $.setCollection = function(collection) {
 }
 
 $.setConfiguration = function(conf) {
-	if (conf == null) {
-		Core.getConfiguration()
-		.then(function(fetchedConfiguration) {
-			Config = fetchedConfiguration;
-		});
-	} else {
-		Config = conf;
-	}
-}
+	if (conf != null) return Config = conf;
 
+	Core.getConfiguration()
+	.then(function(fetchedConfiguration) {
+		Config = fetchedConfiguration;
+	});
+}
 
 // Event listeners
 
 function listItemClicked(e) {
-	if (e.itemId) Router.go("/movie/" + e.itemId);
+	if (e.itemId) Router.go("/movies/" + e.itemId);
 };
 
 

@@ -1,5 +1,12 @@
 <Alloy>
 	<Window title="Movie">
-		<Label text="Single Movie" />
+		<ScrollView id="container">
+			<View id="coverContainer">
+				<ImageView id="cover"/>
+			</View>
+			<View id="info">
+				<Label id="title" />
+			</View>
+		</ScrollView>
 	</Window>
 </Alloy>

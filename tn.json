@@ -1,4 +1,4 @@
 {
- "sim": ["build", "-T", "simulator", "-p", "ios", "--device-id", "18E3838D-D606-40B5-90BA-2A8E87B22111", "--sdk", "6.2.3.CAFFEINA-1"],
+ "sim": ["build", "-T", "simulator", "-p", "ios", "--device-id", "5ADD5F36-EE20-404C-8794-AB580CD5D922", "--sdk", "6.2.3.CAFFEINA-1"],
  "droid": ["build", "--platform", "android", "--target", "device", "--device-id", "all", "--sdk", "6.2.3.CAFFEINA-1"]
 }
